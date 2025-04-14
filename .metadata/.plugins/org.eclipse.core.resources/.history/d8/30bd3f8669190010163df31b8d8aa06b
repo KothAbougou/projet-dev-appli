@@ -1,0 +1,13 @@
+package tuto.web;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class WebConnexion {
+	@GetMapping("/bonjour")
+	public String bonjour()
+	{
+		return "Bonjour";
+	}
+
+}
