@@ -1,0 +1,10 @@
+package cantine.dao;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.lang.NonNull;
+
+import cantine.data.TypePlat;
+
+public interface DaoTypePlat extends CrudRepository<TypePlat, Long> {
+	@NonNull Iterable<TypePlat> findAll();
+}

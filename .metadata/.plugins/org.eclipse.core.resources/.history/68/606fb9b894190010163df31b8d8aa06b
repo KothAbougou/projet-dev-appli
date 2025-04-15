@@ -1,0 +1,11 @@
+package cantine.dao;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+import cantine.data.Plat;
+
+public interface DaoPlat extends CrudRepository<Plat, Long>, PagingAndSortingRepository<Plat, Long> {
+	@Query("SELECT count(id_plat) WHERE id_type_plat = :idTypePlat")
+	Long compterPourIdPlat(Long idTypePlat);
+}

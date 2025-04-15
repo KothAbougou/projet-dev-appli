@@ -265,3 +265,74 @@ END
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2025-04-14 21:42:36.628
 !MESSAGE Classpath changed for project: tuto
+
+!ENTRY com.gitlab.eclipse.gitlab-eclipse-plugin 1 0 2025-04-15 02:11:08.595
+!MESSAGE Sending workspace folders change notification to Language Server.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-04-15 02:12:31.309
+!MESSAGE Classpath changed for project: cantine
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-04-15 02:12:31.311
+!MESSAGE Boot project ADDED: cantine
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-04-15 02:12:40.730
+!MESSAGE Classpath changed for project: cantine
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-04-15 08:33:09.860
+!MESSAGE ExecutionException occurred during shutdown of EndpointProxy for org.eclipse.lsp4j.jsonrpc.RemoteEndpoint@30d53dfe
+!STACK 0
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: Le canal de communication est sur le point d’être fermé
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.LanguageServerWrapper$LanguageServerContext.close(LanguageServerWrapper.java:165)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$10(LanguageServerWrapper.java:610)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: Le canal de communication est sur le point d’être fermé
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:356)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:171)
+	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
+	at jdk.proxy25/jdk.proxy25.$Proxy127.shutdown(Unknown Source)
+	at org.eclipse.lsp4e.LanguageServerWrapper$LanguageServerContext.close(LanguageServerWrapper.java:163)
+	... 8 more
+Caused by: java.io.IOException: Le canal de communication est sur le point d’être fermé
+	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:367)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+	at java.base/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:252)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:240)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
+	... 13 more
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-04-15 08:33:09.887
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\dev25\jdk-22\bin\javaw.exe
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=C:/Users/richa/prog/project/3ilProject/cours/dev25/projet-dev-appli/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1744698789831
+-Dlanguageserver.hover-timeout=225
+-jar
+C:\DEV25\eclipse-STS-4.27\plugins\org.springframework.tooling.boot.ls_1.59.0.202411281450\servers\spring-boot-language-server\spring-boot-language-server-1.59.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-04-15 08:33:09.899
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-04-15 08:33:09.933
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 4984
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-04-15 08:33:10.076
+!MESSAGE DelegatingStreamConnectionProvider - Stopping Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-04-15 08:33:10.124
+!MESSAGE Stopped org.springframework.tooling.boot.ls LS process 1436
